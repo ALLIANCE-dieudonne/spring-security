@@ -1,4 +1,4 @@
-package com.alliance.springsecurity.controllers;
+package com.alliance.springsecurity.authControllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
