@@ -1,7 +1,6 @@
 package com.alliance.springsecurity.config;
 
-import com.alliance.springsecurity.JwtService;
-import com.alliance.springsecurity.user.User;
+import com.alliance.springsecurity.auth.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
