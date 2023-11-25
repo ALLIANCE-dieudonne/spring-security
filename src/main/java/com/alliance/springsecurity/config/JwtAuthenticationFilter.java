@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.CachingUserDetailsService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -42,7 +41,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     //user email extraction from jwt token
     userEmail = jwtService.extractUserName(jwt);
     if (userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-      User user = this.userDetailsService.loadUserByUsername(userEmail);
+      UserDetails user = this.userDetailsService.loadUserByUsername(userEmail);
     }
 
   }
